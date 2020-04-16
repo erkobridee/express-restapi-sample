@@ -1,0 +1,26 @@
+{
+  "name": "express-restapi-sample",
+  "version": "1.0.0",
+  "description": "Basic example of REST API using the [express.js](https://expressjs.com/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erkobridee/express-restapi-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erkobridee/express-restapi-sample/issues"
+  },
+  "homepage": "https://github.com/erkobridee/express-restapi-sample#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0"
+  }
+}
