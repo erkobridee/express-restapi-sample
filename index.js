@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 
+const apiRouter = require('./api');
+
 const app = express();
 
 // adding Helmet to enhance your API's security
@@ -28,13 +30,11 @@ const staticPublicOptions = {
 };
 app.use(express.static('public', staticPublicOptions))
 
+app.use('/api', apiRouter);
+
 app.get('/', (req, res) => {
   // res.send('Hello Express app!');
-	res.sendfile(__dirname + '/public/index.html');
-});
-
-app.get('/api', (req, res) => {
-  res.json({ message: 'Hello Express app!' });
+	res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(3000, () => {
