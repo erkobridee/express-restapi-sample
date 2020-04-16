@@ -7,12 +7,12 @@ const got = require('got');
 const express = require('express');
 const router = express.Router();
 
-router.get('/:query', async (req, res) => {
-	const { query } = req.params;
+router.get('/:ip', async (req, res) => {
+	const { ip } = req.params;
 
-	const response = await got(`http://ip-api.com/json/${query}`);
+	const response = await got(`http://ip-api.com/json/${ip}`);
 
-	const { query: queryAttr, status, ...others } = JSON.parse(response.body);
+	const { query, status, ...others } = JSON.parse(response.body);
 
 	res.json(others);
 });
